@@ -33,6 +33,7 @@ const Left = styled.div`
   z-index: 5;
   margin-top: 20%;
 `;
+
 const Right = styled.div`
   width: 50%;
   position: relative;

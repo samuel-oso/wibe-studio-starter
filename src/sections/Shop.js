@@ -77,7 +77,7 @@ const Right = styled.div`
 
   h1 {
     width: 5rem;
-    kmargin: 0 2rem;
+    margin: 0 2rem;
   }
 `;
 
@@ -141,7 +141,7 @@ const Shop = () => {
           scroller: ".App", // locomotive element
           scrub: true,
           pin: true,
-          markers: true,
+          // markers: true,
         },
         //  we have to increase scrolling height of this section same as the scrolling element width
         height: `${scrollingElement.scrollWidth}px`,
@@ -157,7 +157,7 @@ const Shop = () => {
           scroller: ".App", // locomotive element
           scrub: true,
 
-          markers: true,
+          // markers: true,
         },
         //  we have to increase scrolling height of this section same as the scrolling element width
         x: -pinWrapWidth,
@@ -167,7 +167,11 @@ const Shop = () => {
       ScrollTrigger.refresh();
     }, 1000);
 
-    return () => {};
+    return () => {
+      // Let's clear instances
+      t1.kill();
+      ScrollTrigger.kill();
+    };
   }, []);
   return (
     <Section ref={ref}>

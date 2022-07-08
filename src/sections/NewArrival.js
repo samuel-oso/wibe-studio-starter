@@ -32,6 +32,25 @@ const Overlay = styled.div`
   box-shadow: 0 0 0 4vw ${(props) => props.theme.text};
   border: 3px solid ${(props) => props.theme.body};
   z-index: 11;
+
+  @media (max-width: 70em) {
+    width: 40vw;
+    height: 80vh;
+  }
+
+  @media (max-width: 64em) {
+    width: 50vw;
+    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+  }
+
+  @media (max-width: 48em) {
+    width: 60vw;
+  }
+
+  @media (max-width: 30em) {
+    width: 80vw;
+    height: 60vh;
+  }
 `;
 
 const Title = styled.h1`
@@ -44,6 +63,13 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const Text = styled.div`
@@ -55,6 +81,10 @@ const Text = styled.div`
   top: 0;
   right: 0;
   z-index: 11;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
@@ -70,6 +100,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 64em) {
+    width: 30vw;
+  }
+  @media (max-width: 48em) {
+    width: 40vw;
+  }
+  @media (max-width: 30em) {
+    width: 60vw;
+  }
 `;
 
 const Item = styled.div`
